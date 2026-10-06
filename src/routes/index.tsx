@@ -152,9 +152,9 @@ function Index() {
             </div>
           </article>
 
-          {additionalProjects.map((project, index) => (
+          {additionalProjects.map((project) => (
             <article key={project.number} className="mt-16 grid gap-6 border-t border-paper/20 pt-16 md:grid-cols-[minmax(0,1fr)_15rem] md:gap-10">
-              <div className={`group relative aspect-video overflow-hidden bg-surface-dark ${index % 2 === 1 ? "md:order-2" : ""}`}>
+              <div className="group relative aspect-video overflow-hidden bg-surface-dark">
                 <video
                   className="h-full w-full object-contain"
                   src={project.video}
@@ -168,7 +168,7 @@ function Index() {
                   aria-label={`${project.name} website demo`}
                 />
               </div>
-              <div className={`flex flex-col justify-between gap-8 md:py-1 ${index % 2 === 1 ? "md:order-1" : ""}`}>
+              <div className="flex flex-col justify-between gap-8 md:py-1">
                 <div>
                   <span className="text-xs font-semibold uppercase text-brand">{project.number} / Website</span>
                   <h3 className="mt-4 font-display text-4xl font-bold uppercase md:text-5xl">{project.name}</h3>
