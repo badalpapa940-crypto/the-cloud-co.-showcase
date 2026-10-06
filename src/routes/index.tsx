@@ -12,6 +12,12 @@ import project04Video from "@/assets/project-04.mp4.asset.json";
 import project04Poster from "@/assets/project-04.jpg.asset.json";
 import project05Video from "@/assets/project-05.mp4.asset.json";
 import project05Poster from "@/assets/project-05.jpg.asset.json";
+import project06Video from "@/assets/project-06.mp4.asset.json";
+import project06Poster from "@/assets/project-06.jpg.asset.json";
+import project07Video from "@/assets/project-07.mp4.asset.json";
+import project07Poster from "@/assets/project-07.jpg.asset.json";
+import project08Video from "@/assets/project-08.mp4.asset.json";
+import project08Poster from "@/assets/project-08.jpg.asset.json";
 import { BrandStrip } from "@/components/brand-strip";
 import { Button } from "@/components/ui/button";
 
@@ -49,6 +55,9 @@ const additionalProjects = [
   { number: "03", name: "Project 03", video: project03Video.url, poster: project03Poster.url },
   { number: "04", name: "Project 04", video: project04Video.url, poster: project04Poster.url },
   { number: "05", name: "Project 05", video: project05Video.url, poster: project05Poster.url },
+  { number: "06", name: "Project 06", video: project06Video.url, poster: project06Poster.url },
+  { number: "07", name: "Project 07", video: project07Video.url, poster: project07Poster.url },
+  { number: "08", name: "Project 08", video: project08Video.url, poster: project08Poster.url },
 ];
 
 function Index() {
@@ -93,7 +102,7 @@ function Index() {
         <div className="mx-auto max-w-screen-2xl">
           <div className="mb-12 flex items-end justify-between border-b border-paper/20 pb-5 md:mb-16">
             <h2 className="font-display text-4xl font-bold uppercase md:text-6xl">Selected work</h2>
-            <span className="text-xs font-semibold uppercase text-paper/55">2026 / 05 projects</span>
+            <span className="text-xs font-semibold uppercase text-paper/55">2026 / 08 projects</span>
           </div>
 
           <article className="grid gap-6 border-b border-paper/20 pb-16 md:grid-cols-[minmax(0,1fr)_15rem] md:gap-10">
