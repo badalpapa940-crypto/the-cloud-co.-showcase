@@ -167,7 +167,21 @@
   a { outline-offset: 4px; }
 }
 
+.brand-marquee-track {
+  animation: brand-scroll 36s linear infinite;
+}
+
+.brand-marquee:hover .brand-marquee-track,
+.brand-marquee[data-paused="true"] .brand-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes brand-scroll {
+  to { transform: translateX(-50%); }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .brand-marquee-track { animation: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

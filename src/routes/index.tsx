@@ -6,6 +6,13 @@ import ovrszdVideo from "@/assets/ovrszd-case-study.mp4.asset.json";
 import ovrszdPoster from "@/assets/ovrszd-poster.jpg.asset.json";
 import chikuVideo from "@/assets/chiku-case-study.mp4.asset.json";
 import chikuPoster from "@/assets/chiku-poster.jpg.asset.json";
+import project03Video from "@/assets/project-03.mp4.asset.json";
+import project03Poster from "@/assets/project-03.jpg.asset.json";
+import project04Video from "@/assets/project-04.mp4.asset.json";
+import project04Poster from "@/assets/project-04.jpg.asset.json";
+import project05Video from "@/assets/project-05.mp4.asset.json";
+import project05Poster from "@/assets/project-05.jpg.asset.json";
+import { BrandStrip } from "@/components/brand-strip";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -36,6 +43,12 @@ const services = [
   "E-commerce",
   "Motion & interaction",
   "Launch support",
+];
+
+const additionalProjects = [
+  { number: "03", name: "Project 03", video: project03Video.url, poster: project03Poster.url },
+  { number: "04", name: "Project 04", video: project04Video.url, poster: project04Poster.url },
+  { number: "05", name: "Project 05", video: project05Video.url, poster: project05Poster.url },
 ];
 
 function Index() {
@@ -74,11 +87,13 @@ function Index() {
         </div>
       </section>
 
+      <BrandStrip />
+
       <section id="work" className="bg-ink px-5 py-20 text-paper md:px-10 md:py-28">
         <div className="mx-auto max-w-screen-2xl">
           <div className="mb-12 flex items-end justify-between border-b border-paper/20 pb-5 md:mb-16">
             <h2 className="font-display text-4xl font-bold uppercase md:text-6xl">Selected work</h2>
-            <span className="text-xs font-semibold uppercase text-paper/55">2026 / 02 projects</span>
+            <span className="text-xs font-semibold uppercase text-paper/55">2026 / 05 projects</span>
           </div>
 
           <article className="grid gap-6 border-b border-paper/20 pb-16 md:grid-cols-[minmax(0,1fr)_15rem] md:gap-10">
@@ -136,6 +151,34 @@ function Index() {
               />
             </div>
           </article>
+
+          {additionalProjects.map((project, index) => (
+            <article key={project.number} className="mt-16 grid gap-6 border-t border-paper/20 pt-16 md:grid-cols-[minmax(0,1fr)_15rem] md:gap-10">
+              <div className={`group relative aspect-video overflow-hidden bg-surface-dark ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                <video
+                  className="h-full w-full object-contain"
+                  src={project.video}
+                  poster={project.poster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  aria-label={`${project.name} website demo`}
+                />
+              </div>
+              <div className={`flex flex-col justify-between gap-8 md:py-1 ${index % 2 === 1 ? "md:order-1" : ""}`}>
+                <div>
+                  <span className="text-xs font-semibold uppercase text-brand">{project.number} / Website</span>
+                  <h3 className="mt-4 font-display text-4xl font-bold uppercase md:text-5xl">{project.name}</h3>
+                </div>
+                <div className="flex flex-wrap items-center gap-2 text-[0.68rem] font-semibold uppercase text-paper/55">
+                  <span>Web design</span><Circle className="size-2 fill-brand text-brand" /><span>Development</span>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
