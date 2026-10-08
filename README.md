@@ -26,7 +26,7 @@ npm run dev
 ## Netlify hosting
 
 Connect this repository to Netlify. `netlify.toml` sets the build command to
-`bun run build`, the publish directory to `.output/public`, and the Netlify
+`bun run build`, the publish directory to `dist`, and the Netlify static
 deployment target. The public portfolio is prerendered to HTML; its video and
 image URLs are proxied to Lovable's immutable asset service.
 
