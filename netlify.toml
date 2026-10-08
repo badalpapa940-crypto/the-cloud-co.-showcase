@@ -1,0 +1,13 @@
+[build]
+  command = "bun run build"
+  publish = ".output/public"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
+
+# Lovable's immutable media remains CDN-hosted on external deployments.
+[[redirects]]
+  from = "/__l5e/assets-v1/*"
+  to = "https://id-preview--a28f0cc9-2d75-4a3a-b930-ae8112394063.lovable.app/__l5e/assets-v1/:splat"
+  status = 200
+  force = true
