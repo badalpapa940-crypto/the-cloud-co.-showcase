@@ -22,3 +22,14 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Netlify hosting
+
+Connect this repository to Netlify. `netlify.toml` sets the build command to
+`bun run build`, the publish directory to `dist`, and the Netlify static
+deployment target. The public portfolio is prerendered to HTML; its video and
+image URLs are proxied to Lovable's immutable asset service.
+
+This remains a React 19 / TanStack Start project, not MERN. The portfolio does
+not need MongoDB or Express. Netlify hosting has been configured but no Netlify
+deployment has been performed or verified.

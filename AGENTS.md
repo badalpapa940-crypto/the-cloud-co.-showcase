@@ -11,3 +11,4 @@
 
 - Keep the public site as a single editorial portfolio route with reusable sections; the concise one-page flow keeps project proof and contact conversion together.
 - Keep the client-brand marquee in a reusable section with identical repeated groups and pause/reduced-motion support, so the loop stays seamless and accessible.
+- Keep the public portfolio prerendered for static hosting without replacing TanStack Start; the page has no visitor-specific data and needs no database or Express server.
