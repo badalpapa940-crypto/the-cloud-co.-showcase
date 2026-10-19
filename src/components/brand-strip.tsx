@@ -1,8 +1,17 @@
 import { useState } from "react";
-import { Circle, Pause, Play } from "lucide-react";
+import { Coffee, Gem, HeartPulse, Leaf, Mountain, Pause, Play, Scissors, ShoppingBag, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const brands = ["OVRSZD", "Chiku"];
+const brands = [
+  { name: "OVRSZD", Icon: ShoppingBag, style: "font-display font-black tracking-tighter" },
+  { name: "Lumière", Icon: Sparkles, style: "font-serif italic" },
+  { name: "BREWHAUS", Icon: Coffee, style: "font-mono font-bold tracking-widest" },
+  { name: "Northpeak", Icon: Mountain, style: "font-display font-semibold" },
+  { name: "MediCare+", Icon: HeartPulse, style: "font-sans font-extrabold" },
+  { name: "verdant", Icon: Leaf, style: "font-display font-light lowercase tracking-wide" },
+  { name: "Shear Co.", Icon: Scissors, style: "font-serif font-bold" },
+  { name: "AURUM", Icon: Gem, style: "font-display font-bold tracking-[0.3em]" },
+];
 
 export function BrandStrip() {
   const [paused, setPaused] = useState(false);
@@ -19,10 +28,10 @@ export function BrandStrip() {
         <div className="brand-marquee-track flex w-max">
           {[0, 1].map((group) => (
             <div key={group} className="flex shrink-0 items-center" aria-hidden={group === 1 ? true : undefined}>
-              {[0, 1, 2, 3].flatMap((repeat) => brands.map((brand) => (
-                <div key={`${repeat}-${brand}`} className="flex shrink-0 items-center gap-10 pr-10 md:gap-16 md:pr-16">
-                  <span className="font-display text-4xl font-bold md:text-6xl">{brand}</span>
-                  <Circle className="size-3 fill-brand text-brand" />
+              {[0, 1].flatMap((repeat) => brands.map(({ name, Icon, style }) => (
+                <div key={`${repeat}-${name}`} className="flex shrink-0 items-center gap-3 pr-14 text-foreground/70 transition-colors hover:text-foreground md:pr-20">
+                  <Icon className="size-7 md:size-9" strokeWidth={1.75} />
+                  <span className={`text-2xl md:text-4xl ${style}`}>{name}</span>
                 </div>
               )))}
             </div>
