@@ -50,11 +50,46 @@ const services = [
 ];
 
 const additionalProjects = [
-  { number: "03", name: "Project 03", video: project03Video.url, poster: project03Poster.url },
-  { number: "05", name: "Project 05", video: project05Video.url, poster: project05Poster.url },
-  { number: "06", name: "Project 06", video: project06Video.url, poster: project06Poster.url },
-  { number: "07", name: "Project 07", video: project07Video.url, poster: project07Poster.url },
-  { number: "08", name: "Project 08", video: project08Video.url, poster: project08Poster.url },
+  {
+    number: "03",
+    name: "Project 03",
+    tag: "Café menu",
+    video: project03Video.url,
+    poster: project03Poster.url,
+    description: "A digital café menu made for quick browsing and effortless updates by the team behind the counter.",
+  },
+  {
+    number: "05",
+    name: "Project 05",
+    tag: "Website",
+    video: project05Video.url,
+    poster: project05Poster.url,
+    description: "A recent studio build—design and development, with the client story still being finalised.",
+  },
+  {
+    number: "06",
+    name: "Project 06",
+    tag: "Travel packages",
+    video: project06Video.url,
+    poster: project06Poster.url,
+    description: "A travel package site that lays out itineraries, inclusions, and enquiries in one clear flow.",
+  },
+  {
+    number: "07",
+    name: "Project 07",
+    tag: "Doctor & clinic",
+    video: project07Video.url,
+    poster: project07Poster.url,
+    description: "A clinic website for a doctor—services, credentials, and appointments easy to find on any screen.",
+  },
+  {
+    number: "08",
+    name: "Project 08",
+    tag: "Café menu",
+    video: project08Video.url,
+    poster: project08Poster.url,
+    description: "A second café menu with a warmer, menu-first layout built for guests on their phones.",
+  },
 ];
 
 function Index() {
@@ -118,10 +153,10 @@ function Index() {
             </div>
             <div className="flex flex-col justify-between gap-8 md:py-1">
               <div>
-                <span className="text-xs font-semibold uppercase text-brand">01 / E-commerce</span>
+                <span className="text-xs font-semibold uppercase text-brand">01 / Fashion · Shopify</span>
                 <h3 className="mt-4 font-display text-4xl font-bold uppercase md:text-5xl">OVRSZD</h3>
                 <p className="mt-4 text-sm leading-relaxed text-paper/60">
-                  A cinematic storefront for an oversized essentials label—built around product, motion, and attitude.
+                  A cinematic Shopify storefront for a fashion label—built around product, motion, and attitude.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2 text-[0.68rem] font-semibold uppercase text-paper/55">
@@ -133,10 +168,10 @@ function Index() {
           <article className="mt-16 grid gap-6 md:grid-cols-[15rem_minmax(0,1fr)] md:gap-10">
             <div className="order-2 flex flex-col justify-between gap-8 md:order-1 md:py-1">
               <div>
-                <span className="text-xs font-semibold uppercase text-brand">02 / Experience</span>
+                <span className="text-xs font-semibold uppercase text-brand">02 / Salon</span>
                 <h3 className="mt-4 font-display text-4xl font-bold uppercase md:text-5xl">Chiku</h3>
                 <p className="mt-4 text-sm leading-relaxed text-paper/60">
-                  A sculptural salon experience pairing immersive 3D motion with a frictionless booking journey.
+                  A salon website pairing immersive motion with a frictionless booking journey for new and regular guests.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2 text-[0.68rem] font-semibold uppercase text-paper/55">
@@ -176,8 +211,9 @@ function Index() {
               </div>
               <div className="flex flex-col justify-between gap-8 md:py-1">
                 <div>
-                  <span className="text-xs font-semibold uppercase text-brand">{project.number} / Website</span>
+                  <span className="text-xs font-semibold uppercase text-brand">{project.number} / {project.tag}</span>
                   <h3 className="mt-4 font-display text-4xl font-bold uppercase md:text-5xl">{project.name}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-paper/60">{project.description}</p>
                 </div>
                 <div className="flex flex-wrap items-center gap-2 text-[0.68rem] font-semibold uppercase text-paper/55">
                   <span>Web design</span><Circle className="size-2 fill-brand text-brand" /><span>Development</span>
