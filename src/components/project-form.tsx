@@ -42,9 +42,9 @@ const field = "w-full border-b border-paper/25 bg-transparent py-3 text-base tex
 const label = "mb-3 block text-[0.68rem] font-semibold uppercase text-paper/50";
 
 export function ProjectForm() {
-  const [projectType, setProjectType] = useState<string>(projectTypes[0]);
-  const [budget, setBudget] = useState<string>(budgets[4]);
-  const [timeline, setTimeline] = useState<string>(timelines[1]);
+  const [projectType, setProjectType] = useState<string>("E-commerce / Shopify");
+  const [budget, setBudget] = useState<string>("Not sure yet");
+  const [timeline, setTimeline] = useState<string>("Within a month");
   const [goals, setGoals] = useState<string[]>([]);
   const [error, setError] = useState("");
 
@@ -53,7 +53,7 @@ export function ProjectForm() {
     const fd = new FormData(ev.currentTarget);
     const parsed = schema.safeParse(Object.fromEntries(fd));
     if (!parsed.success) {
-      setError(parsed.error.issues[0].message);
+      setError(parsed.error.issues[0]?.message ?? "Please check the form");
       return;
     }
     setError("");
