@@ -17,6 +17,7 @@ import project07Poster from "@/assets/project-07.jpg.asset.json";
 import project08Video from "@/assets/project-08.mp4.asset.json";
 import project08Poster from "@/assets/project-08.jpg.asset.json";
 import { BrandStrip } from "@/components/brand-strip";
+import { ProjectForm } from "@/components/project-form";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -111,13 +112,41 @@ function Index() {
         </div>
       </header>
 
-      <section id="top" className="relative flex min-h-[92svh] flex-col justify-end px-5 pb-10 pt-36 md:px-10 md:pb-12">
-        <div className="pointer-events-none absolute right-[8%] top-[24%] hidden h-32 w-32 rounded-full border border-foreground/15 lg:block" />
-        <div className="pointer-events-none absolute right-[14%] top-[31%] hidden h-3 w-3 rounded-full bg-brand lg:block" />
-        <p className="mb-8 max-w-sm text-sm leading-relaxed text-muted-foreground md:ml-[51%] md:text-base">
-          Independent web studio turning sharp ideas into digital experiences that move people—and business.
-        </p>
-        <h1 className="max-w-[1500px] font-display text-[clamp(4.1rem,12.5vw,12.5rem)] font-bold uppercase leading-[0.78]">
+      <section id="top" className="relative flex min-h-[92svh] flex-col justify-end px-5 pb-10 pt-32 md:px-10 md:pb-12">
+        <div className="relative mb-10 grid gap-8 lg:mb-4 lg:grid-cols-[1fr_1.15fr] lg:items-end">
+          <div className="space-y-6">
+            <span className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-4 py-2 text-[0.68rem] font-semibold uppercase">
+              <span className="size-2 animate-pulse rounded-full bg-brand" /> Taking new projects
+            </span>
+            <p className="max-w-sm text-sm leading-relaxed text-muted-foreground md:text-base">
+              Independent web studio turning sharp ideas into digital experiences that move people—and business.
+            </p>
+            <div className="flex gap-10 border-t border-foreground/15 pt-5">
+              {[["07+", "Live builds"], ["5", "Industries"], ["24h", "Reply time"]].map(([n, l]) => (
+                <div key={l}>
+                  <div className="font-display text-3xl font-bold md:text-4xl">{n}</div>
+                  <div className="text-[0.68rem] font-semibold uppercase text-muted-foreground">{l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="relative hidden h-[22rem] sm:block">
+            <div className="absolute left-0 top-10 w-[62%] -rotate-3 overflow-hidden rounded-sm bg-ink shadow-2xl">
+              <video className="aspect-video w-full object-cover" src={ovrszdVideo.url} poster={ovrszdPoster.url} autoPlay muted loop playsInline aria-hidden="true" />
+              <span className="block px-3 py-2 text-[0.62rem] font-semibold uppercase text-paper">01 · Fashion store</span>
+            </div>
+            <div className="absolute right-0 top-0 w-[52%] rotate-2 overflow-hidden rounded-sm bg-ink shadow-2xl">
+              <video className="aspect-video w-full object-cover" src={chikuVideo.url} poster={chikuPoster.url} autoPlay muted loop playsInline aria-hidden="true" />
+              <span className="block px-3 py-2 text-[0.62rem] font-semibold uppercase text-paper">02 · Salon</span>
+            </div>
+            <div className="absolute bottom-0 right-[12%] w-[46%] -rotate-1 overflow-hidden rounded-sm bg-ink shadow-2xl">
+              <img className="aspect-video w-full object-cover" src={project06Poster.url} alt="" />
+              <span className="block px-3 py-2 text-[0.62rem] font-semibold uppercase text-paper">06 · Travel</span>
+            </div>
+            <div className="absolute bottom-6 left-[6%] size-4 rounded-full bg-brand" />
+          </div>
+        </div>
+        <h1 className="relative max-w-[1500px] font-display text-[clamp(4.1rem,12.5vw,12.5rem)] font-bold uppercase leading-[0.78]">
           We build<br />websites<span className="text-brand">.</span>
         </h1>
         <div className="mt-9 flex items-end justify-between border-t border-foreground/20 pt-5 text-xs font-semibold uppercase">
@@ -258,12 +287,8 @@ function Index() {
           <h2 className="mt-7 max-w-6xl font-display text-[clamp(3.5rem,10vw,10rem)] font-bold uppercase leading-[0.82]">
             Let’s make it real<span className="text-brand">.</span>
           </h2>
-          <div className="mt-12 flex flex-col items-start justify-between gap-8 border-t border-paper/20 pt-7 md:flex-row md:items-center">
-            <p className="max-w-sm text-sm leading-relaxed text-paper/60">Tell us what you’re building, where you are, and when you want to launch.</p>
-            <Button asChild variant="studioLight" size="lg">
-              <a href="mailto:?subject=Project%20enquiry%20for%20the%20cloud%20co.">Share your brief <ArrowUpRight /></a>
-            </Button>
-          </div>
+          <p className="mt-10 max-w-md text-sm leading-relaxed text-paper/60">Answer a few quick questions—your brief lands straight in our WhatsApp and we reply the same day.</p>
+          <ProjectForm />
           <div className="mt-20 flex flex-wrap justify-between gap-4 border-t border-paper/20 pt-5 text-[0.68rem] font-semibold uppercase text-paper/45">
             <span>© 2026 the cloud co.</span>
             <a href="#top" className="transition-colors hover:text-paper">Back to top ↑</a>
