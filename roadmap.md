@@ -1,4 +1,5 @@
 # Tasks
+- [x] Add a description under every project (fashion Shopify, salon, café menus, travel package, doctor).
 - [x] Replace Project 02 with the October 8 recording and remove Project 04.
 - [x] Rename the portfolio section to Recent projects.
 - [x] Configure Netlify hosting while retaining the supported React framework.
