@@ -42,9 +42,9 @@ const field = "w-full border-b border-paper/25 bg-transparent py-3 text-base tex
 const label = "mb-3 block text-[0.68rem] font-semibold uppercase text-paper/50";
 
 export function ProjectForm() {
-  const [projectType, setProjectType] = useState(projectTypes[0]);
-  const [budget, setBudget] = useState(budgets[4]);
-  const [timeline, setTimeline] = useState(timelines[1]);
+  const [projectType, setProjectType] = useState<string>(projectTypes[0]);
+  const [budget, setBudget] = useState<string>(budgets[4]);
+  const [timeline, setTimeline] = useState<string>(timelines[1]);
   const [goals, setGoals] = useState<string[]>([]);
   const [error, setError] = useState("");
 
