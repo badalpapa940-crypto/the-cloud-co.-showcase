@@ -6,4 +6,6 @@
 - [x] Add the three supplied project recordings to selected work.
 - [x] Add a continuously moving strip of confirmed project brands.
 - [x] Verify moving animation, pause control, covers, and consistent video sizes.
-- [ ] Verify hosted playback and Netlify deployment; requires a real hosted browser/deployment, since sandbox Chromium cannot play the supplied H.264 videos.- [x] Replace brand strip names with demo company logos
+- [x] Replace brand strip names with demo company logos
+- [x] Move all videos, posters, and the logo into the project (`src/assets`) and drop the CDN redirect, so Netlify/Vercel serve the media from the site itself (four oversized videos compressed under the 10 MB file limit).
+- [ ] Perform an actual external deployment (Netlify/Vercel) to confirm live playback; needs the user to connect hosting and publish.
