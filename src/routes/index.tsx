@@ -55,40 +55,40 @@ const additionalProjects = [
     number: "03",
     name: "Project 03",
     tag: "Café menu",
-    video: project03Video.url,
-    poster: project03Poster.url,
+    video: project03Video,
+    poster: project03Poster,
     description: "A digital café menu made for quick browsing and effortless updates by the team behind the counter.",
   },
   {
     number: "05",
     name: "Project 05",
     tag: "Website",
-    video: project05Video.url,
-    poster: project05Poster.url,
+    video: project05Video,
+    poster: project05Poster,
     description: "A recent studio build—design and development, with the client story still being finalised.",
   },
   {
     number: "06",
     name: "Project 06",
     tag: "Travel packages",
-    video: project06Video.url,
-    poster: project06Poster.url,
+    video: project06Video,
+    poster: project06Poster,
     description: "A travel package site that lays out itineraries, inclusions, and enquiries in one clear flow.",
   },
   {
     number: "07",
     name: "Project 07",
     tag: "Doctor & clinic",
-    video: project07Video.url,
-    poster: project07Poster.url,
+    video: project07Video,
+    poster: project07Poster,
     description: "A clinic website for a doctor—services, credentials, and appointments easy to find on any screen.",
   },
   {
     number: "08",
     name: "Project 08",
     tag: "Café menu",
-    video: project08Video.url,
-    poster: project08Poster.url,
+    video: project08Video,
+    poster: project08Poster,
     description: "A second café menu with a warmer, menu-first layout built for guests on their phones.",
   },
 ];
@@ -99,7 +99,7 @@ function Index() {
       <header className="absolute inset-x-0 top-0 z-30 border-b border-foreground/10">
         <div className="mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-5 md:px-10">
           <a href="#top" aria-label="The Cloud Co. home" className="block">
-            <img src={cloudLogo.url} alt="the cloud co." className="h-7 w-auto" />
+            <img src={cloudLogo} alt="the cloud co." className="h-7 w-auto" />
           </a>
           <nav aria-label="Main navigation" className="hidden items-center gap-9 text-xs font-semibold uppercase md:flex">
             <a className="transition-opacity hover:opacity-55" href="#work">Work</a>
@@ -132,15 +132,15 @@ function Index() {
           </div>
           <div className="relative hidden h-[22rem] sm:block">
             <div className="absolute left-0 top-10 w-[62%] -rotate-3 overflow-hidden rounded-sm bg-ink shadow-2xl">
-              <video className="aspect-video w-full object-cover" src={ovrszdVideo.url} poster={ovrszdPoster.url} autoPlay muted loop playsInline aria-hidden="true" />
+              <video className="aspect-video w-full object-cover" src={ovrszdVideo} poster={ovrszdPoster} autoPlay muted loop playsInline aria-hidden="true" />
               <span className="block px-3 py-2 text-[0.62rem] font-semibold uppercase text-paper">01 · Fashion store</span>
             </div>
             <div className="absolute right-0 top-0 w-[52%] rotate-2 overflow-hidden rounded-sm bg-ink shadow-2xl">
-              <video className="aspect-video w-full object-cover" src={chikuVideo.url} poster={chikuPoster.url} autoPlay muted loop playsInline aria-hidden="true" />
+              <video className="aspect-video w-full object-cover" src={chikuVideo} poster={chikuPoster} autoPlay muted loop playsInline aria-hidden="true" />
               <span className="block px-3 py-2 text-[0.62rem] font-semibold uppercase text-paper">02 · Salon</span>
             </div>
             <div className="absolute bottom-0 right-[12%] w-[46%] -rotate-1 overflow-hidden rounded-sm bg-ink shadow-2xl">
-              <img className="aspect-video w-full object-cover" src={project06Poster.url} alt="" />
+              <img className="aspect-video w-full object-cover" src={project06Poster} alt="" />
               <span className="block px-3 py-2 text-[0.62rem] font-semibold uppercase text-paper">06 · Travel</span>
             </div>
             <div className="absolute bottom-6 left-[6%] size-4 rounded-full bg-brand" />
@@ -170,8 +170,8 @@ function Index() {
             <div className="group relative aspect-video overflow-hidden bg-surface-dark">
               <video
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.015]"
-                src={ovrszdVideo.url}
-                poster={ovrszdPoster.url}
+                src={ovrszdVideo}
+                poster={ovrszdPoster}
                 autoPlay
                 muted
                 loop
@@ -210,8 +210,8 @@ function Index() {
             <div className="group order-1 relative aspect-video overflow-hidden bg-surface-dark md:order-2">
               <video
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.015]"
-                src={chikuVideo.url}
-                poster={chikuPoster.url}
+                src={chikuVideo}
+                poster={chikuPoster}
                 autoPlay
                 muted
                 loop
